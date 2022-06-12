@@ -1,0 +1,11 @@
+.emptycard{
+    width:440px;
+    height:180px;
+    border:solid 5px black;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding :20px;
+    margin-bottom: 50px;;
+    margin :50px auto;
+}

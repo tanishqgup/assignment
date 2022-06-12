@@ -3,12 +3,14 @@ import axios from 'axios'
 import {useDispatch} from 'react-redux';
 import {getCurrentUser} from '../redux/actions'
 
-function Button({value}) {
+function Button({value, setLoading}) {
   const dispatch = useDispatch()
    
   async function getUser(id) {
-      const response = await axios.get(`https://reqres.in/api/users/${id}`)
-      dispatch(getCurrentUser(response.data.data))
+    setLoading(true);
+    const response = await axios.get(`https://reqres.in/api/users/${id}`)
+    dispatch(getCurrentUser(response.data.data))
+    setLoading(false);
   }
 
   return (

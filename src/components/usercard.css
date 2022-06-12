@@ -7,7 +7,12 @@
     margin-bottom: 50px;;
     margin :50px auto;
     text-align:left;
-    
+    align-items: center;
+    justify-content: center;
+}
+
+.usercardfake {
+    display: flex;
 }
 
 .avatar{
